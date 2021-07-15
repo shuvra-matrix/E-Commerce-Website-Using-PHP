@@ -49,13 +49,16 @@
                                 </div>
                                 <div class="form-group">
                                     <select id="category" required name="category">
-                                        <option value="mobile">Mobile</option>
-                                        <option value="laptop">Laptop</option>
-                                        <option value="shirts">Shirts</option>
-                                        <option value="pants">Pants</option>
-                                        <option value="kitchen">Kitchen</option>
-                                        <option value="home">Home</option>
 
+                                    <?php 
+                                        include("../pertials/db.php");
+                                        $query = "SELECT * FROM catagories";
+                                        $result = mysqli_query($connection,$query);
+                                        while($row=mysqli_fetch_assoc($result))
+                                        {
+                                            echo "<option value=".$row['id'].">".$row['name']."</option>";
+                                        }
+                                    ?>
                                     </select>
                                 </div>
                                 <div class="form-group">
