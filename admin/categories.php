@@ -32,7 +32,7 @@
                     <div class="col-sm-3">
                     </div>
                     <div class="col-sm-6">
-                        <form role="form">
+                        <form role="form" method="POST" action="cathandler.php">
                             <h1>Categories</h1>
                             <div class="box-body">
                                 <div class="form-group">

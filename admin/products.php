@@ -32,12 +32,12 @@
                     <div class="col-sm-3">
                     </div>
                     <div class="col-sm-6">
-                        <form role="form" method="POST">
+                        <form role="form" method="POST" action="./producthandler.php" enctype="multipart/form-data">
                             <h1>Product Details</h1>
                             <div class="box-body">
                                 <div class="form-group">
                                     <label for="name">Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter Product Name" name="productname" required>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter Product Name" name="name" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="price">Price</label>
@@ -48,7 +48,7 @@
                                     <textarea  class="form-control" id="des" rows="10" name="desc" required></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <select id="category" required>
+                                    <select id="category" required name="category">
                                         <option value="mobile">Mobile</option>
                                         <option value="laptop">Laptop</option>
                                         <option value="shirts">Shirts</option>
