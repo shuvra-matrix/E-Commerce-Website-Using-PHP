@@ -1,19 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include("pertials/head.php"); ?>
+<?php include("pertials/head.php") ?>
 
 <body class="animsition">
 
-	<!-- Header -->
 	<?php include("pertials/header.php") ?>
 
-	<?php include("pertials/slider.php") ?>
 
-	<!-- Banner -->
-	<?php include("pertials/banner.php") ?>
-
-	
-	<!-- Product -->
 	<?php include("pertials/product.php") ?>
 
 	<!-- Filter -->
@@ -727,8 +720,10 @@
 		</a>
 	</div>
 	</div>
-	</section>
-	<?php include ("pertials/footer.php") ?>
+	</div>
+
+
+	<?php include("pertials/footer.php") ?>
 </body>
 
 </html>
