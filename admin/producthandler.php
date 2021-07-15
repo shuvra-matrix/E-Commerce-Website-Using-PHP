@@ -6,6 +6,7 @@ $productname = $_POST["name"];
 $price= $_POST["price"];
 $desc =  $_POST["desc"];
 $category = $_POST["category"];
+$submit = $_POST["submit"];
 
 
 $targets = "../uploads/";
@@ -15,24 +16,29 @@ $file_temp = $_FILES ['picture']['tmp_name'];
 $file_store = "../uploads/".$file_name;
 move_uploaded_file($file_temp,$file_store);
 
-
-$query = "INSERT INTO products(name,price,description,catagory_id,pictures) VALUES('$productname','$price','$desc','$category','$file_path')";
-
-$connect = mysqli_query($connection,$query);
-
-if($connect)
+if($submit)
 {
+    $query = "INSERT INTO products(name,price,description,catagory_id,pictures) VALUES('$productname','$price','$desc','$category','$file_path')";
+
+    $connect = mysqli_query($connection,$query);
+
+    if($connect)
+    {
+        ?>
+        <script>alert("Update Successfully")</script>
+        <?php include("./products.php"); 
+        
+    }
+    else
+    {?>
     ?>
-    <script>alert("Update Successfully")</script>
-    <?php include("./products.php"); 
-    
+        <script>alert("Update Successfully")</script>
+        <?php include("./products.php"); 
+
+    }
 }
 else
-{?>
- ?>
-    <script>alert("Update Successfully")</script>
-    <?php include("./products.php"); 
-
+{
+    include("./products.php");
 }
-
 ?>
