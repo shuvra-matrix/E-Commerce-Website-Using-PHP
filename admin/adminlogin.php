@@ -3,21 +3,24 @@ include("./adminpercials/head.php");
 include("../pertials/db.php");
 if (isset($_POST['login'])) 
 {
-
+    session_start();
     $email = $_POST['email'];
     $password = $_POST['password'];
 
     $query = "SELECT * from admins WHERE username='$email' AND password='$password'";
     $result = mysqli_query($connection, $query);
     $data = $result->fetch_assoc();
+
+    $_SESSION['email']=$data['username'];
+    $_SESSION['password']=$data['password'];
     if ($email = $data['username'] and $password = $data['password']) 
     {
         header('location: index.php');         
     } 
-    else 
-    {
-        header('location: adminlogin.php');             
-    }
+    // else 
+    // {
+    //     header('location: adminlogin.php');             
+    // }
 }
 
 ?>
