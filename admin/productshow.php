@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    
+
 <?php
 
 
@@ -46,7 +46,10 @@ include("adminpercials/head.php")    ?>
                                 <h3><?php echo $row['id'] ?>: <?php echo $row['name'] ?></h3>
                                 <br>
                             </a>
-                            <a href="productupdate.php?pro_id=<?php echo $row['id'] ?>"><button class="btn btn-primary">Update</button></a><hr><br>
+                            <a href="productupdate.php?pro_id=<?php echo $row['id'] ?>"><button class="btn btn-success">Update</button></a>
+                            <span><a href="productdelete.php?pro_id=<?php echo $row['id'] ?>"><button class="btn btn-danger">Delete</button></a>
+                                <hr>
+                            </span>
                         <?php }
                         ?>
                     </div>

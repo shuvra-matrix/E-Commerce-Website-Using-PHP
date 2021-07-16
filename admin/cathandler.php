@@ -1,5 +1,5 @@
 <?php
-
+include("adminpercials/session.php");
 include ("../pertials/db.php");
 
 $catogory = $_POST["category"];
