@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
-    
 <?php
-
-
 include("adminpercials/session.php");
 include("adminpercials/head.php")    ?>
 
@@ -15,10 +12,6 @@ include("adminpercials/head.php")    ?>
 
         ?>
 
-        <!-- Left side column. contains the logo and sidebar -->
-
-
-        <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
             <section class="content-header">
@@ -34,25 +27,64 @@ include("adminpercials/head.php")    ?>
 
             <section class="content">
                 <div class="row">
-                    <div class="col-sm-9">
-                        <?php
-
-                        include("../pertials/db.php");
-                        $query = "SELECT * FROM products";
-                        $results = mysqli_query($connection, $query);
-
-                        while ($row = mysqli_fetch_assoc($results)) { ?>
-                            <a href="productsshow.php?pro_id=<?php echo $row['id'] ?>">
-                                <h3><?php echo $row['id'] ?>: <?php echo $row['name'] ?></h3>
-                                <br>
-                            </a>
-                            <a href="productupdate.php?pro_id=<?php echo $row['id'] ?>"><button class="btn btn-primary">Update</button></a><hr><br>
-                        <?php }
-                        ?>
-                    </div>
                     <div class="col-sm-3">
                     </div>
-                </div>
+                    <div class="col-sm-6">
+                        <form role="form" method="POST" action="./productupdatehandler.php" enctype="multipart/form-data">
+
+                            <?php
+
+                            $newid = $_GET['pro_id'];
+                            include("../pertials/db.php");
+
+                            $query = "SELECT * FROM products WHERE id= '$newid'";
+                            $result = mysqli_query($connection, $query);
+                            $data = mysqli_fetch_assoc($result);
+                            ?>
+                            <h1>Update Product Details</h1>
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter Product Name" value="<?php echo  $data['name'] ?>" name="name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="price">Price</label>
+                                    <input type="text" class="form-control" id="price" placeholder="Product Price" value="<?php echo  $data['price'] ?>" name="price">
+                                </div>
+                                <div class="form-group">
+                                    <label for="des">Prduct Description</label>
+                                    <textarea class="form-control" id="des" rows="10" name="desc" value="<?php echo  $data['description'] ?>" placeholder=" <?php echo  $data['description'] ?>"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <select id="category" required name="category" value="<?php echo  $data['catagory_id'] ?>">
+
+                                        <?php
+                                        include("../pertials/db.php");
+                                        $query = "SELECT * FROM catagories";
+                                        $result = mysqli_query($connection, $query);
+                                        while ($row = mysqli_fetch_assoc($result)) {
+                                            echo "<option value=" . $row['id'] . ">" . $row['name'] . "</option>";
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="picture">Product Picture</label>
+                                    <input type="file" id="picture" name="picture" value="<?php echo  $data['pictures'] ?>">
+
+                                    <p class="help-block">Example block-level help text here.</p>
+                                </div>
+                            </div>
+
+
+                            <div class="box-footer">
+                                <input type="hidden" name="from_id" value="<?php echo $data['id'] ?>">
+                                <input type="submit" class="btn btn-primary" name="submit" value="Update">
+                            </div>
+                        </form>
+                        </>
+                    </div>
+
             </section>
 
         </div>

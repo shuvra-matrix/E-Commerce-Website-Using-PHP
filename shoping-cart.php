@@ -192,9 +192,6 @@
 		</div>
 	</form>
 
-
-
-
 	<?php include("pertials/footer.php") ?>
 
 </body>
