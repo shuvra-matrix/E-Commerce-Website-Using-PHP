@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
-<?php include("adminpercials/head.php")    ?>
+
+<?php 
+
+include("adminpercials/session.php");
+include("adminpercials/head.php")    ?>
 
 <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
@@ -49,10 +53,6 @@
                         <h3> Description: <?php echo $rows['description'] ?></h3>
                         <hr><br>
                         <img    style="width: 20rem;"     src="<?php echo $rows['pictures'] ?>" alt="No Pictures">
-
-
-
-
                     </div>
                     <div class="col-sm-3">
                     </div>

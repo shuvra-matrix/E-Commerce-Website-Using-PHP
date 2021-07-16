@@ -40,6 +40,14 @@
                  </a>
              </li>
              <li>
+                 <a href="productshow.php">
+                     <i class="fa fa-th"></i> <span>Products Show</span>
+                     <span class="pull-right-container">
+                         <small class="label pull-right bg-green">new</small>
+                     </span>
+                 </a>
+             </li>
+             <li>
                  <a href="./adminpercials/logout.php">
                      <i class="fa fa-th"></i> <span>Sign Out</span>
                      <span class="pull-right-container">
