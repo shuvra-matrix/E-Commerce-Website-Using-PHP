@@ -5,6 +5,8 @@
 <body class="animsition">
 
 	<?php include("pertials/header.php") ?>
+	<br>
+	<br>
 	<?php include("pertials/slider.php") ?>
 	<?php include("pertials/banner.php") ?>
 	<?php include("pertials/product.php") ?>

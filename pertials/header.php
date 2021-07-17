@@ -1,18 +1,40 @@
-	<?php 
-	
+	<?php
+
 	include("pertials/db.php") ?>
 	<header>
-		<div class="container-menu-desktop">
+		<div class="container-menu-desktop" style="color: white;">
 			<div class="top-bar">
 				<div class="content-topbar flex-sb-m h-full container">
-					<div class="left-top-bar">
-						We Class You Up.....
+					<div class="left-top-bar" style="color: white; font-size:1.4rem">
+						<?php
+						session_start();
+						if (!empty($_SESSION)) {
+							echo "Hi"." ".$_SESSION['name'];
+						} else {
+							echo "You are Amazing";
+						}
+						?>
 					</div>
 
 					<div class="right-top-bar flex-w h-full">
-						<a href="handler/customerlogout.php" class="flex-c-m trans-04 p-lr-25">
-							Help & FAQ
-						</a>
+
+						<?php
+						if (!empty($_SESSION)) { ?>
+
+							<a href="handeler/logout.php" class="flex-c-m trans-04 p-lr-25">
+								Log Out
+							</a>
+
+						<?php } else { ?>
+
+							<a href="customer.php" class="flex-c-m trans-04 p-lr-25">
+								Log In
+							</a>
+
+						<?php } ?>
+
+
+
 						<a href="customerforms.php" class="flex-c-m trans-04 p-lr-25">
 							My Account
 						</a>
@@ -20,11 +42,11 @@
 				</div>
 			</div>
 
-			<div class="wrap-menu-desktop">
+			<div class="wrap-menu-desktop" style="background: white; width:100%; margin:0px 0px">
 				<nav class="limiter-menu-desktop container">
 
 					<a href="#" class="logo">
-						<img src="images/icons/logo-01.png" alt="IMG-LOGO">
+						<h1 style="color: black; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Your Winkel</h1>
 					</a>
 
 					<div class="menu-desktop">
@@ -45,7 +67,6 @@
 							</li>
 						</ul>
 					</div>
-
 					<!-- Icon header -->
 					<div class="wrap-icon-header flex-w flex-r-m">
 						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
@@ -147,7 +168,7 @@
 				</div>
 			</div>
 
-					<!-- <div class="header-cart-content flex-w js-pscroll">
+			<!-- <div class="header-cart-content flex-w js-pscroll">
 						<ul class="header-cart-wrapitem w-full">
 							<li class="header-cart-item flex-w flex-t m-b-12">
 								<div class="header-cart-item-img">
@@ -168,21 +189,22 @@
 
 
 
-					<div class="w-full">
-						<div class="header-cart-total w-full p-tb-40">
-							Total: $75.00
-						</div>
+			<div class="w-full">
+				<div class="header-cart-total w-full p-tb-40">
+					Total: $75.00
+				</div>
 
-						<div class="header-cart-buttons flex-w w-full">
-							<a href="shoping-cart.php" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
-								View Cart
-							</a>
+				<div class="header-cart-buttons flex-w w-full">
+					<a href="shoping-cart.php" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
+						View Cart
+					</a>
 
-							<a href="shoping-cart.php" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
-								Check Out
-							</a>
-						</div>
-					</div>
-					</div>
+					<a href="shoping-cart.php" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+						Check Out
+					</a>
+				</div>
+			</div>
 		</div>
 	</div>
+	</div>
+	
