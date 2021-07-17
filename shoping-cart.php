@@ -50,7 +50,7 @@ include("pertials/head.php")
 							$total = 0;
 							if (isset($_SESSION['cart'])) {
 								foreach ($_SESSION['cart'] as $key => $value) {
-									$item_value = $value['item_price']*$value['quentity'];
+									$item_value = $value['item_price'] * $value['quentity'];
 									$total = $total + $item_value;
 
 							?>
@@ -132,7 +132,7 @@ include("pertials/head.php")
 
 						<div class="size-209">
 							<span class="mtext-110 cl2">
-								<?php echo $total ?>
+								₹ <?php echo $total ?>
 							</span>
 						</div>
 					</div>
@@ -190,7 +190,7 @@ include("pertials/head.php")
 
 						<div class="size-209 p-t-1">
 							<span class="mtext-110 cl2">
-								<?php echo $total ?>
+								₹ <?php echo $total ?>
 							</span>
 						</div>
 					</div>

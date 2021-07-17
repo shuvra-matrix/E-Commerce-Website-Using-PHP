@@ -2,7 +2,7 @@
 <html>
 <?php
 include("adminpercials/session.php");
-include("adminpercials/head.php") ;   ?>
+include("adminpercials/head.php");   ?>
 
 <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
@@ -34,23 +34,25 @@ include("adminpercials/head.php") ;   ?>
                     <div class="col-sm-3">
                     </div>
                     <div class="col-sm-6">
-                        <form role="form" method="POST" action="cathandler.php">
+                        <form role="form" method="POST" action="cathandler.php" enctype="multipart/form-data">
                             <h1>Categories</h1>
                             <div class="box-body">
                                 <div class="form-group">
                                     <label for="categories">Categories</label>
-                                    <input type="text" class="form-control" id="categories" placeholder="Enter Categories" name="category">
+                                    <input type="text" class="form-control" id="categories" placeholder="Enter Categories" name="name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="picture">Category Picture</label>
+                                    <input type="file" id="picture" name="picture" required>
                                 </div>
                             </div>
-                            <!-- /.box-body -->
-
                             <div class="box-footer">
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary" name="submit">Submit</button>
                             </div>
                         </form>
 
-                    </>
-                </div>
+                        </>
+                    </div>
 
             </section>
 

@@ -67,8 +67,6 @@ include("adminpercials/head.php")    ?>
                                 <div class="form-group">
                                     <label for="picture">Product Picture</label>
                                     <input type="file" id="picture" name="picture" required>
-
-                                    <p class="help-block">Example block-level help text here.</p>
                                 </div>
                             </div>
 

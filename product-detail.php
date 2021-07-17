@@ -18,7 +18,10 @@
 
 	?>
 	</div>
-
+	<br>
+	<br>
+	<br>
+	<br>
 	<section class="sec-product-detail bg0 p-t-65 p-b-60">
 		<div class="container">
 			<div class="row">
@@ -70,7 +73,7 @@
 						</h4>
 
 						<span class="mtext-106 cl2">
-							<?php echo $row['price'] ?>
+							₹ <?php echo $row['price'] ?>
 						</span>
 
 						<p class="stext-102 cl3 p-t-23">
@@ -131,7 +134,7 @@
 										</div>
 									</div>
 
-									<button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" name="addtocart" onclick="location.href='carthandler.php?cart_id=<?php echo $row['id'] ?>&cart_name=<?php echo $row['name'] ?>&cart_price=<?php echo $row['price']?>&cart_pic=<?php echo $row['pictures'] ?>'">
+									<button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" name="addtocart" onclick="location.href='carthandler.php?cart_id=<?php echo $row['id'] ?>&cart_name=<?php echo $row['name'] ?>&cart_price=<?php echo $row['price'] ?>&cart_pic=<?php echo $row['pictures'] ?>'">
 										Add to cart
 									</button>
 								</div>
