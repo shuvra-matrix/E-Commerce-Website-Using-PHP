@@ -10,7 +10,8 @@
 <img src="http://shuvra.me/images/shop_page.png" alt="no image">
 
 <img src="http://shuvra.me/images/cart.png" alt="no image">
-
+<br>
+<h1>Admin Area </h1>
 
 <img src="http://shuvra.me/images/caragory admin.png" alt="no image">
 
