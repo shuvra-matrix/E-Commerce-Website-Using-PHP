@@ -17,10 +17,10 @@ if (isset($_POST['login']))
     {
         header('location: index.php');         
     } 
-    // else 
-    // {
-    //     header('location: adminlogin.php');             
-    // }
+    else 
+    {
+        header('location: adminlogin.php');             
+    }
 }
 
 ?>

@@ -1,4 +1,6 @@
-	<?php include("pertials/db.php") ?>
+	<?php 
+	
+	include("pertials/db.php") ?>
 	<header>
 		<div class="container-menu-desktop">
 			<div class="top-bar">
@@ -8,12 +10,12 @@
 					</div>
 
 					<div class="right-top-bar flex-w h-full">
-							<a href="handler/customerlogout.php" class="flex-c-m trans-04 p-lr-25">
-								Help & FAQ
-							</a>
-							<a href="customerforms.php" class="flex-c-m trans-04 p-lr-25">
-								My Account
-							</a>
+						<a href="handler/customerlogout.php" class="flex-c-m trans-04 p-lr-25">
+							Help & FAQ
+						</a>
+						<a href="customerforms.php" class="flex-c-m trans-04 p-lr-25">
+							My Account
+						</a>
 					</div>
 				</div>
 			</div>
@@ -145,72 +147,42 @@
 				</div>
 			</div>
 
-			<div class="header-cart-content flex-w js-pscroll">
-				<ul class="header-cart-wrapitem w-full">
-					<li class="header-cart-item flex-w flex-t m-b-12">
-						<div class="header-cart-item-img">
-							<img src="images/item-cart-01.jpg" alt="IMG">
+					<!-- <div class="header-cart-content flex-w js-pscroll">
+						<ul class="header-cart-wrapitem w-full">
+							<li class="header-cart-item flex-w flex-t m-b-12">
+								<div class="header-cart-item-img">
+									<img src="<?php echo $value['item_pic'] ?>" alt="IMG">
+								</div>
+
+								<div class="header-cart-item-txt p-t-8">
+									<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
+										<?php echo $value['item_name'] ?>
+									</a>
+
+									<span class="header-cart-item-info">
+										1 x <?php echo $value['item_price'] ?>
+									</span>
+								</div>
+							</li> -->
+
+
+
+
+					<div class="w-full">
+						<div class="header-cart-total w-full p-tb-40">
+							Total: $75.00
 						</div>
 
-						<div class="header-cart-item-txt p-t-8">
-							<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
-								White Shirt Pleat
+						<div class="header-cart-buttons flex-w w-full">
+							<a href="shoping-cart.php" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
+								View Cart
 							</a>
 
-							<span class="header-cart-item-info">
-								1 x $19.00
-							</span>
-						</div>
-					</li>
-
-					<li class="header-cart-item flex-w flex-t m-b-12">
-						<div class="header-cart-item-img">
-							<img src="images/item-cart-02.jpg" alt="IMG">
-						</div>
-
-						<div class="header-cart-item-txt p-t-8">
-							<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
-								Converse All Star
+							<a href="shoping-cart.php" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+								Check Out
 							</a>
-
-							<span class="header-cart-item-info">
-								1 x $39.00
-							</span>
 						</div>
-					</li>
-
-					<li class="header-cart-item flex-w flex-t m-b-12">
-						<div class="header-cart-item-img">
-							<img src="images/item-cart-03.jpg" alt="IMG">
-						</div>
-
-						<div class="header-cart-item-txt p-t-8">
-							<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
-								Nixon Porter Leather
-							</a>
-
-							<span class="header-cart-item-info">
-								1 x $17.00
-							</span>
-						</div>
-					</li>
-				</ul>
-
-				<div class="w-full">
-					<div class="header-cart-total w-full p-tb-40">
-						Total: $75.00
 					</div>
-
-					<div class="header-cart-buttons flex-w w-full">
-						<a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
-							View Cart
-						</a>
-
-						<a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
-							Check Out
-						</a>
 					</div>
-				</div>
-			</div>
 		</div>
 	</div>
