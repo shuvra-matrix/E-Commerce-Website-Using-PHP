@@ -1,5 +1,7 @@
 # E-Commerce-Website-Using-PHP
 
+<h1>Customer Area</h1>
+
 <img src="http://shuvra.me/images/customer%20page.png" alt="no image">
 
 <img src="http://shuvra.me/images/homepage.png" alt="no image">
