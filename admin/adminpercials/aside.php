@@ -4,10 +4,10 @@
          <!-- Sidebar user panel -->
          <div class="user-panel">
              <div class="pull-left image">
-                 <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                 <img src="" class="img-circle" alt="." style="background: orange;">
              </div>
              <div class="pull-left info">
-                 <p>Alexander Pierce</p>
+                 <p>Shuvra</p>
                  <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
              </div>
          </div>
